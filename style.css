@@ -1,0 +1,63 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-image: url("https://stepik.org/media/attachments/lesson/374893/world.png");
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.container{
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 400px;
+    width: 400px;
+}
+
+.card_header{
+    text-align: center;
+    font-size: 24px;
+}
+
+.cards_couple{
+    width: 120px;
+    height: 120px;
+    position: relative;
+    transition: all 0.5s linear;
+    transform-style: preserve-3d;
+}
+
+.cards_couple:hover{
+    transform: rotateY(180deg);
+}
+
+.cards-front, .cards_back{
+    background: #f9efe5;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+}
+
+.cards_back{
+    z-index: 1;
+    background: #f0821e;
+    transform: rotateY(180deg);
+    color: white;
+}
+
+.cards-front{
+    z-index: 2;
+    backface-visibility: hidden;
+    color: #fe800b;
+}
+
+p{
+    padding-top: 20px;
+}
